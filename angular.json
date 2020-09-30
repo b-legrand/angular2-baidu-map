@@ -14,6 +14,11 @@
           "options": {
             "tsConfig": "projects/lib/tsconfig.lib.json",
             "project": "projects/lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/lib/tsconfig.lib.prod.json"
+            }
           }
         },
         "lint": {
@@ -44,7 +49,7 @@
             "main": "demo/main.ts",
             "polyfills": "demo/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": ["demo/favicon.ico", "demo/assets"],
             "styles": [
               "demo/styles.styl",
@@ -66,7 +71,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -109,5 +113,6 @@
       }
     }
   },
-  "defaultProject": "lib"
+  "defaultProject": "lib",
+  "cli": {"packageManager": "yarn"}
 }

@@ -49,7 +49,7 @@ import { BMapLib } from './types/BMapLib'
   ]
 })
 export class BaiduMapModule {
-  public static forRoot(config?: ScriptLoaderConfig): ModuleWithProviders {
+  public static forRoot(config?: ScriptLoaderConfig): ModuleWithProviders<BaiduMapModule> {
     return {
       ngModule: BaiduMapModule,
       providers: [
@@ -59,7 +59,17 @@ export class BaiduMapModule {
     }
   }
 }
-
+export { ControlComponent } from './components/control.component'
+export { MapComponent } from './components/map.component'
+export { MarkerComponent } from './components/marker.component'
+export { PolylineComponent } from './components/polyline.component'
+export { CircleComponent } from './components/circle.component'
+export { PolygonComponent } from './components/polygon.component'
+export { HeatmapComponent } from './components/heatmap.component'
+export { TileLayerComponent } from './components/tilelayer.component'
+export { TrafficLayerComponent } from './components/trafficlayer.component'
+export { CanvasLayerComponent } from './components/canvaslayer.component'
+export { MarkerClustererComponent } from './components/markerClusterer.component'
 export { BMapInstance, MapOptions, MapTypeEnum } from './types/Map'
 export { BMapType } from './types/MapType'
 export { BProjection } from './types/Projection'

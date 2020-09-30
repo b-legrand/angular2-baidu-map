@@ -65,7 +65,7 @@ export class MapComponent
   @Output() private loaded = new EventEmitter()
   @Output() private clicked = new EventEmitter()
 
-  @ViewChild('mapinstance', { static: false }) private mapInstance: ElementRef
+  @ViewChild('mapinstance') private mapInstance: ElementRef
 
   constructor(private service: MapService) {}
 
